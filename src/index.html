@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <title>提取字体文件内文字</title>
+</head>
+<body>
+  <form action="/profile" method="post" enctype="multipart/form-data">
+    导入字体文件：<input type="file" name="file" required="required">
+    <br/>
+    <span style="color: red;">注意：只能导入TTF格式字体文件，其他格式参考说明</span>
+    <br />
+    <br />
+    <textarea
+      type="text" 
+      name="txt"
+      placeholder="输入字体文件内要提取的文字"
+      style="width: 500px"
+      required="required"
+    ></textarea>
+    <br />
+    <br />
+    <button>导出</button>
+    <br />
+    <br />
+    <p>说明：</p>
+    <p>受限于sfnttool.jar对字体文件格式的支持，<br />
+      目前对提取文字的字体文件格式支持最好的是ttf格式文件，<br />
+      其他字体文件可先自行在 <a href="https://convertio.co/zh/otf-ttf/" target="_blank" rel="noopener noreferrer">https://convertio.co/zh/otf-ttf/</a> <br/>
+      转换成ttf格式文件，然后再进行提取。
+    </p>
+  </form>
+</body>
+</html>

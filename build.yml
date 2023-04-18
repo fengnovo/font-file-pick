@@ -1,0 +1,13 @@
+version: "3"
+services:
+  app:
+    platform: linux/amd64
+    image: font_file_pick
+    container_name: font_file_pick
+    ports:
+      - "3000:3000"
+    build:
+      context: ./               # 指定dockerfile文件的所在路径  
+      dockerfile: Dockerfile    # 指定Dockerfile文件名称 
+    command: npm run start
+  
